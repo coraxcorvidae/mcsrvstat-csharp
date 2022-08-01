@@ -20,9 +20,12 @@ namespace McSrvStat.Demo
                 if (status.Players.Online > 0)
                 {
                     Console.WriteLine(":");
-                    foreach (var player in status.Players.List)
+                    if (status.Players.List != null)
                     {
-                        Console.WriteLine($"\t{player}");
+                        foreach (var player in status.Players.List)
+                        {
+                            Console.WriteLine($"\t{player}");
+                        }
                     }
                 }
                 else
