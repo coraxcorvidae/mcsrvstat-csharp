@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net46</TargetFramework>
+    <TargetFramework>net60</TargetFramework>
     <Authors>Corax Corvidae</Authors>
     <Description>C# client library for getting Minecraft server status information from https://api.mcsrvstat.us/.</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>

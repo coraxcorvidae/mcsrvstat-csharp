@@ -1,5 +1,4 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -14,11 +13,11 @@ namespace McSrvStat
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("User-Agent", "mcsrvstat-csharp (https://https://github.com/coraxcorvidae/mcsrvstat-csharp)");
+            client.DefaultRequestHeaders.Add("User-Agent", "mcsrvstat-csharp (https://github.com/coraxcorvidae/mcsrvstat-csharp)");
 
-            var stringTask = await client.GetStringAsync("https://api.mcsrvstat.us/2/" + domain);
+            var jsonString = await client.GetStringAsync($"https://api.mcsrvstat.us/2/{domain}");
 
-            return JsonConvert.DeserializeObject<ServerStatus>(stringTask);
+            return JsonConvert.DeserializeObject<ServerStatus>(jsonString);
         }
 
         public static ServerStatus GetServerStatus(string domain)

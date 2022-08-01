@@ -2,12 +2,13 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net46</TargetFramework>
+    <TargetFramework>net60</TargetFramework>
     <Authors>Corax Corvidae</Authors>
     <Product>McSrvStat.Lib</Product>
     <Company />
     <Description>Demonstration program for McSrvStat.Lib.dll.</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <StartupObject>McSrvStat.Demo.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
